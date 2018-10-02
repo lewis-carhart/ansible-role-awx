@@ -13,7 +13,7 @@
 
 - name: install pip
   yum:
-    name: 'pip'
+    name: 'python-pip'
     state: latest
 
 - name: install ansible
@@ -21,7 +21,7 @@
     name: ansible
     state: latest
 
-- name: install yum
+- name: install items with yum
   yum:
     name: "{{ item }}"
   with_items:
