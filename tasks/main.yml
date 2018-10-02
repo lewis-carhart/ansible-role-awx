@@ -5,14 +5,16 @@
     state: latest
     update_cache: yes
 
-- name: easy_install pip
-  easy_install:
-    name: pip
+- name: yum install pip
+  yum:
+    name: python-pip
+    state: latest
 
 - name: install ansible
   pip:
     name: ansible
     state: latest
+
 - name: install yum
   yum:
     name: "{{ item }}"
