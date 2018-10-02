@@ -11,16 +11,6 @@
     state: latest
     update_cache: yes
 
-- name: install pip
-  yum:
-    name: 'python-pip'
-    state: latest
-
-- name: install ansible
-  pip:
-    name: ansible
-    state: latest
-
 - name: install items with yum
   yum:
     name: "{{ item }}"
