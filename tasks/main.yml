@@ -1,5 +1,5 @@
 ---
-- name: yum update
+- name: update yum repository
   yum:
     name: '*'
     state: latest
@@ -10,7 +10,7 @@
     name: 'epel-release'
     state: latest
 
-- name: install items with yum
+- name: install git, docker and python-docker-py
   yum:
     name: "{{ item }}"
   with_items:
@@ -18,21 +18,6 @@
     - docker
     - python-docker-py
 
-# - name: start docker
-#   systemd:
-#     name: docker
-#     state: started
-#
-# - name: enable docker
-#   systemd:
-#     name: docker
-#     enabled: yes
-#
-# - name: git clone awx
-#   git:
-#     repo: 'https://github.com/ansible/awx.git'
-#     dest: /opt/
-#     clone: yes
-#
-# - name: install awx
-#   shell: cd "/opt/installer" && /bin/ansible-playbook -i inventory install.yml
+- name: start docker
+  notify:
+    - start-docker
