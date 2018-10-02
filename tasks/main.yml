@@ -5,10 +5,14 @@
     state: latest
     update_cache: yes
 
-- name: yum install pip
-  yum:
-    name: python-pip
-    state: latest
+- name: get pip
+  get_url:
+    url: https://bootstrap.pypa.io/get-pip.py
+    dest: /opt/
+    mode: 0700
+
+- name: install pip
+  script: get-pip.py
 
 - name: install ansible
   pip:
