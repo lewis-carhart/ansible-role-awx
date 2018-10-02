@@ -5,15 +5,16 @@
     state: latest
     update_cache: yes
 
-- name: get pip
-  get_url:
-    url: https://bootstrap.pypa.io/get-pip.py
-    dest: /opt/
-    mode: 0700
+- name: install epel-release
+  yum:
+    name: 'epel-release'
+    state: latest
 
 - name: install pip
-  script: get-pip.py
-
+  yum:
+    name: 'python-pip'
+    state: latest
+    
 - name: install ansible
   pip:
     name: ansible
