@@ -9,12 +9,13 @@
   yum:
     name: 'epel-release'
     state: latest
+    update_cache: yes
 
 - name: install pip
   yum:
-    name: 'python-pip'
+    name: 'pip'
     state: latest
-    
+
 - name: install ansible
   pip:
     name: ansible
