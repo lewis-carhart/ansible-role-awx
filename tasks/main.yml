@@ -7,10 +7,8 @@
      - git
      - python-docker-py
      - ansible
-
- - name: testing
-   notify:
-    - start-docker
+    notify:
+     - start-docker
 
  - name: git clone awx
    git:
