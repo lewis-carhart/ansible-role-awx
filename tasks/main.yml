@@ -19,7 +19,7 @@
  - name: git clone awx
    git:
      repo: 'https://github.com/ansible/awx.git'
-     dest: /opt/
+     dest: /opt/awx/
      clone: yes
 
  - name: install awx
