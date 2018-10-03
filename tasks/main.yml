@@ -10,17 +10,17 @@
    - start docker
    - enable docker
 
-- name: create temporary build directory
-  tempfile:
-    state: directory
-    suffix: build
-  register: tmpdir
+ - name: create temporary build directory
+   tempfile:
+     state: directory
+     suffix: build
+   register: tmpdir
 
-- name: git clone awx
-  git:
-    repo: 'https://github.com/ansible/awx.git'
-    dest: "{{ tmpdir.path }}"
-    clone: yes
+ - name: git clone awx
+   git:
+     repo: 'https://github.com/ansible/awx.git'
+     dest: "{{ tmpdir.path }}"
+     clone: yes
 
-- name: install awx
-  shell: cd "{{ tmpdir.path }}/installer" && /bin/ansible-playbook -i inventory install.yml
+ - name: install awx
+   shell: cd "{{ tmpdir.path }}/installer" && /bin/ansible-playbook -i inventory install.yml
