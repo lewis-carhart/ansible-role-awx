@@ -1,10 +1,10 @@
 ---
-- name: Install dependencies
-  yum:
-    name: "{{ item }}"
-  with_items:
-    - docker
-    - git
-    - python-docker-py
+ - name: Install dependencies
+   yum:
+     name: "{{ item }}"
+   with_items:
+     - docker
+     - git
+     - python-docker-py
   notify:
-    - start-docker
+     - start-docker
