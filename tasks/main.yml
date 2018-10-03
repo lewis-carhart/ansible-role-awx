@@ -8,7 +8,7 @@
      - python-docker-py
      - ansible
    notify:
-     - start-docker
+     - restart-docker
 
  - name: git clone awx
    git:
