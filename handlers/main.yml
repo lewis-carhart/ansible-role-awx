@@ -3,8 +3,3 @@
   systemd:
     name: docker
     state: started
-
-- name: enable docker
-  systemd:
-    name: docker
-    state: enabled

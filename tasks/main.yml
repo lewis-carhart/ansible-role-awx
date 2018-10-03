@@ -9,7 +9,6 @@
      - ansible
    notify:
    - start docker
-   - enable docker
    
  - name: git clone awx
    git:
