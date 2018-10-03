@@ -6,5 +6,5 @@
      - docker
      - git
      - python-docker-py
-  notify:
-     - start-docker
+   notify:
+   - start-docker
