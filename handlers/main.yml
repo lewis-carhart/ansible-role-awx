@@ -1,5 +1,10 @@
 ---
-- name: start-docker
+- name: start docker
   systemd:
     name: docker
     state: started
+
+- name: enable docker
+  service:
+    name: docker
+    state: enabled

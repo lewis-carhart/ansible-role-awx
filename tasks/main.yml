@@ -7,4 +7,5 @@
      - git
      - python-docker-py
    notify:
-   - start-docker
+   - start docker
+   - enable docker
