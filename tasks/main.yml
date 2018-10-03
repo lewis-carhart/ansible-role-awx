@@ -10,13 +10,7 @@
    notify:
    - start docker
    - enable docker
-
- - name: create temporary build directory
-   tempfile:
-     state: directory
-     suffix: build
-   register: tmpdir
-
+   
  - name: git clone awx
    git:
      repo: 'https://github.com/ansible/awx.git'
