@@ -8,9 +8,9 @@
      - python-docker-py
      - ansible
 
- - name: start docker
+ - name: testing
    notify:
-     - start-docker
+    - start-docker
 
  - name: git clone awx
    git:
