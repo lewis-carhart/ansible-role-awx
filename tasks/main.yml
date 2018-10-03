@@ -7,7 +7,7 @@
      - git
      - python-docker-py
      - ansible
-    notify:
+   notify:
      - start-docker
 
  - name: git clone awx
