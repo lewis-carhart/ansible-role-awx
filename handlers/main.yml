@@ -5,6 +5,6 @@
     state: started
 
 - name: enable docker
-  service:
+  systemd:
     name: docker
     state: enabled
