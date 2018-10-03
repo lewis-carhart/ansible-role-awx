@@ -23,4 +23,4 @@
      clone: yes
 
  - name: install awx
-   shell: cd "/opt/installer" && /bin/ansible-playbook -i inventory install.yml
+   shell: cd "/opt/awx/installer" && /bin/ansible-playbook -i inventory install.yml
